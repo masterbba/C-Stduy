@@ -1,9 +1,0 @@
-E:\Study\BrainC#\GitHub\WinFormStudy\bin\Debug\WinFormStudy.exe.config
-E:\Study\BrainC#\GitHub\WinFormStudy\bin\Debug\WinFormStudy.exe
-E:\Study\BrainC#\GitHub\WinFormStudy\bin\Debug\WinFormStudy.pdb
-E:\Study\BrainC#\GitHub\WinFormStudy\obj\Debug\WinFormStudy.csprojResolveAssemblyReference.cache
-E:\Study\BrainC#\GitHub\WinFormStudy\obj\Debug\WinFormStudy.MainForm.resources
-E:\Study\BrainC#\GitHub\WinFormStudy\obj\Debug\WinFormStudy.Properties.Resources.resources
-E:\Study\BrainC#\GitHub\WinFormStudy\obj\Debug\WinFormStudy.csproj.GenerateResource.Cache
-E:\Study\BrainC#\GitHub\WinFormStudy\obj\Debug\WinFormStudy.exe
-E:\Study\BrainC#\GitHub\WinFormStudy\obj\Debug\WinFormStudy.pdb
