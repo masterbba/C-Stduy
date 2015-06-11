@@ -35,16 +35,22 @@
             this.cboFont = new System.Windows.Forms.ComboBox();
             this.lblFont = new System.Windows.Forms.Label();
             this.grpBar = new System.Windows.Forms.GroupBox();
-            this.tbDummy = new System.Windows.Forms.TrackBar();
             this.pgDummy = new System.Windows.Forms.ProgressBar();
+            this.tbDummy = new System.Windows.Forms.TrackBar();
             this.btnModal = new System.Windows.Forms.Button();
             this.btnModaless = new System.Windows.Forms.Button();
             this.btnMessageBox = new System.Windows.Forms.Button();
             this.grpForm = new System.Windows.Forms.GroupBox();
+            this.grpTreeList = new System.Windows.Forms.GroupBox();
+            this.tvDummy = new System.Windows.Forms.TreeView();
+            this.lvDummy = new System.Windows.Forms.ListView();
+            this.btnAddRoot = new System.Windows.Forms.Button();
+            this.btnAddChild = new System.Windows.Forms.Button();
             this.grpFont.SuspendLayout();
             this.grpBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbDummy)).BeginInit();
             this.grpForm.SuspendLayout();
+            this.grpTreeList.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpFont
@@ -122,6 +128,14 @@
             this.grpBar.TabStop = false;
             this.grpBar.Text = "TrackBar && ProgressBar";
             // 
+            // pgDummy
+            // 
+            this.pgDummy.Location = new System.Drawing.Point(6, 53);
+            this.pgDummy.Maximum = 20;
+            this.pgDummy.Name = "pgDummy";
+            this.pgDummy.Size = new System.Drawing.Size(476, 23);
+            this.pgDummy.TabIndex = 1;
+            // 
             // tbDummy
             // 
             this.tbDummy.Location = new System.Drawing.Point(3, 17);
@@ -130,14 +144,6 @@
             this.tbDummy.Size = new System.Drawing.Size(479, 45);
             this.tbDummy.TabIndex = 0;
             this.tbDummy.Scroll += new System.EventHandler(this.thDummy_Scroll);
-            // 
-            // pgDummy
-            // 
-            this.pgDummy.Location = new System.Drawing.Point(6, 53);
-            this.pgDummy.Maximum = 20;
-            this.pgDummy.Name = "pgDummy";
-            this.pgDummy.Size = new System.Drawing.Size(476, 23);
-            this.pgDummy.TabIndex = 1;
             // 
             // btnModal
             // 
@@ -181,11 +187,61 @@
             this.grpForm.TabStop = false;
             this.grpForm.Text = "Model && Modaless";
             // 
+            // grpTreeList
+            // 
+            this.grpTreeList.Controls.Add(this.btnAddChild);
+            this.grpTreeList.Controls.Add(this.btnAddRoot);
+            this.grpTreeList.Controls.Add(this.lvDummy);
+            this.grpTreeList.Controls.Add(this.tvDummy);
+            this.grpTreeList.Location = new System.Drawing.Point(19, 239);
+            this.grpTreeList.Name = "grpTreeList";
+            this.grpTreeList.Size = new System.Drawing.Size(476, 205);
+            this.grpTreeList.TabIndex = 10;
+            this.grpTreeList.TabStop = false;
+            this.grpTreeList.Text = "TreeView && ListView";
+            // 
+            // tvDummy
+            // 
+            this.tvDummy.Location = new System.Drawing.Point(6, 20);
+            this.tvDummy.Name = "tvDummy";
+            this.tvDummy.Size = new System.Drawing.Size(220, 146);
+            this.tvDummy.TabIndex = 0;
+            // 
+            // lvDummy
+            // 
+            this.lvDummy.Location = new System.Drawing.Point(232, 20);
+            this.lvDummy.Name = "lvDummy";
+            this.lvDummy.Size = new System.Drawing.Size(238, 146);
+            this.lvDummy.TabIndex = 1;
+            this.lvDummy.UseCompatibleStateImageBehavior = false;
+            this.lvDummy.View = System.Windows.Forms.View.Details;
+            // 
+            // btnAddRoot
+            // 
+            this.btnAddRoot.Location = new System.Drawing.Point(18, 172);
+            this.btnAddRoot.Name = "btnAddRoot";
+            this.btnAddRoot.Size = new System.Drawing.Size(75, 23);
+            this.btnAddRoot.TabIndex = 11;
+            this.btnAddRoot.Text = "루트 추가";
+            this.btnAddRoot.UseVisualStyleBackColor = true;
+            this.btnAddRoot.Click += new System.EventHandler(this.btnAddRoot_Click);
+            // 
+            // btnAddChild
+            // 
+            this.btnAddChild.Location = new System.Drawing.Point(105, 172);
+            this.btnAddChild.Name = "btnAddChild";
+            this.btnAddChild.Size = new System.Drawing.Size(75, 23);
+            this.btnAddChild.TabIndex = 12;
+            this.btnAddChild.Text = "자식 추가";
+            this.btnAddChild.UseVisualStyleBackColor = true;
+            this.btnAddChild.Click += new System.EventHandler(this.btnAddChild_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 250);
+            this.ClientSize = new System.Drawing.Size(526, 599);
+            this.Controls.Add(this.grpTreeList);
             this.Controls.Add(this.grpBar);
             this.Controls.Add(this.grpFont);
             this.Controls.Add(this.grpForm);
@@ -198,6 +254,7 @@
             this.grpBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbDummy)).EndInit();
             this.grpForm.ResumeLayout(false);
+            this.grpTreeList.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -217,6 +274,11 @@
         private System.Windows.Forms.Button btnModaless;
         private System.Windows.Forms.Button btnMessageBox;
         private System.Windows.Forms.GroupBox grpForm;
+        private System.Windows.Forms.GroupBox grpTreeList;
+        private System.Windows.Forms.Button btnAddChild;
+        private System.Windows.Forms.Button btnAddRoot;
+        private System.Windows.Forms.ListView lvDummy;
+        private System.Windows.Forms.TreeView tvDummy;
     }
 }
 

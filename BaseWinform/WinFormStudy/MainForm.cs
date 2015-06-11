@@ -12,9 +12,33 @@ namespace WinFormStudy
 {
     public partial class MainForm : Form
     {
+        Random random = new Random(37);
+
         public MainForm()
         {
             InitializeComponent();
+
+            lvDummy.Columns.Add("Name");
+            lvDummy.Columns.Add("Depth");
+        }
+
+        protected void TreeToList()
+        {
+            lvDummy.Items.Clear();
+            foreach (TreeNode node in tvDummy.Nodes)
+                TreeToList(node);
+        }
+
+        protected void TreeToList( TreeNode Node )
+        {
+            lvDummy.Items.Add(
+                new ListViewItem(
+                    new string[] { Node.Text, Node.FullPath.Count(f => f == '\\').ToString() }));
+
+            foreach( TreeNode node in Node.Nodes )
+            {
+                TreeToList(node);
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -84,6 +108,24 @@ namespace WinFormStudy
         private void btnMessageBox_Click(object sender, EventArgs e)
         {
             MessageBox.Show(txtSampleText.Text, "MessageBox Text", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void btnAddRoot_Click(object sender, EventArgs e)
+        {
+            tvDummy.Nodes.Add(random.Next().ToString());
+            TreeToList();
+        }
+
+        private void btnAddChild_Click(object sender, EventArgs e)
+        {
+            if( tvDummy.SelectedNode == null )
+            {
+                MessageBox.Show("선택한 노드가 없습니다.", "Tree View Test", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            tvDummy.SelectedNode.Nodes.Add(random.Next().ToString());
+            tvDummy.SelectedNode.Expand();
+            TreeToList();
         }
     }
 }
