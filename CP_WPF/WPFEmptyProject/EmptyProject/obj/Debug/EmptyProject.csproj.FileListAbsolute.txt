@@ -1,0 +1,5 @@
+E:\Study\BrainC#\CP_WPF\WPFEmptyProject\EmptyProject\obj\Debug\EmptyProject.csprojResolveAssemblyReference.cache
+E:\Study\BrainC#\CP_WPF\WPFEmptyProject\EmptyProject\bin\Debug\EmptyProject.exe
+E:\Study\BrainC#\CP_WPF\WPFEmptyProject\EmptyProject\bin\Debug\EmptyProject.pdb
+E:\Study\BrainC#\CP_WPF\WPFEmptyProject\EmptyProject\obj\Debug\EmptyProject.exe
+E:\Study\BrainC#\CP_WPF\WPFEmptyProject\EmptyProject\obj\Debug\EmptyProject.pdb
