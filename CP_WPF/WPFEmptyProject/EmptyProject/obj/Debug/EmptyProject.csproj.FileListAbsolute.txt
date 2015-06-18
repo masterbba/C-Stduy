@@ -3,3 +3,8 @@ E:\Study\BrainC#\CP_WPF\WPFEmptyProject\EmptyProject\bin\Debug\EmptyProject.exe
 E:\Study\BrainC#\CP_WPF\WPFEmptyProject\EmptyProject\bin\Debug\EmptyProject.pdb
 E:\Study\BrainC#\CP_WPF\WPFEmptyProject\EmptyProject\obj\Debug\EmptyProject.exe
 E:\Study\BrainC#\CP_WPF\WPFEmptyProject\EmptyProject\obj\Debug\EmptyProject.pdb
+D:\Study\C#Study\WinFormStudy\CP_WPF\WPFEmptyProject\EmptyProject\obj\Debug\EmptyProject.csprojResolveAssemblyReference.cache
+D:\Study\C#Study\WinFormStudy\CP_WPF\WPFEmptyProject\EmptyProject\bin\Debug\EmptyProject.exe
+D:\Study\C#Study\WinFormStudy\CP_WPF\WPFEmptyProject\EmptyProject\bin\Debug\EmptyProject.pdb
+D:\Study\C#Study\WinFormStudy\CP_WPF\WPFEmptyProject\EmptyProject\obj\Debug\EmptyProject.exe
+D:\Study\C#Study\WinFormStudy\CP_WPF\WPFEmptyProject\EmptyProject\obj\Debug\EmptyProject.pdb
