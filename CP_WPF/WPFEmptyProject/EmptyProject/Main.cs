@@ -1,33 +1,17 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 
-namespace TypeYourTitle
+namespace FollowTheRainbow
 {
-    public class TypeYourTitle : Window
+    class FollowTheRainbow : Window
     {
         [STAThread]
-        public static void Main()
+        static void Main()
         {
             Application app = new Application();
-            app.Run(new TypeYourTitle());
-        }
-
-        public TypeYourTitle()
-        {
-            WindowStyle = WindowStyle.None;
-            ResizeMode = ResizeMode.NoResize;
-            Topmost = true;
-        }
-
-        protected override void OnTextInput(TextCompositionEventArgs e)
-        {
-            base.OnTextInput(e);
-
-            if (e.Text == "\b" && Title.Length > 0)
-                Title = Title.Substring(0, Title.Length - 1);
-            else if (e.Text.Length > 0 && !Char.IsControl(e.Text[0]))
-                Title += e.Text;
+            app.Run(new FollowTheRainbow());
         }
     }
 }
