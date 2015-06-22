@@ -76,8 +76,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimpeEllipse.cs" />
-    <Compile Include="RenderTheGraphic.cs" />
+    <Compile Include="ClickTheButton.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
