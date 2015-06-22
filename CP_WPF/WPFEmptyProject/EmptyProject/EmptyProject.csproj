@@ -76,10 +76,12 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormatTheButton.cs" />
+    <Compile Include="ImageTheButton.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="testImg.jpg" />
+    <Resource Include="Image\testImg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
