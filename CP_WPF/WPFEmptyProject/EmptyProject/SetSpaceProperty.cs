@@ -1,28 +1,26 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace SetFontSizeProperty
+namespace SetSpaceProperty
 {
-    public class SetFontSizeProperty : Window
+    public class SetSpaceProperty : SpaceWindow
     {
         [STAThread]
         public static void Main()
         {
             Application app = new Application();
-            app.Run(new SetFontSizeProperty());
+            app.Run(new SetSpaceProperty());
         }
 
-        public SetFontSizeProperty()
+        public SetSpaceProperty()
         {
-            Title = "Set FonstSize Property";
+            Title = "Set Space Property";
             SizeToContent = SizeToContent.WidthAndHeight;
             ResizeMode = ResizeMode.CanMinimize;
-            FontSize = 16;
-            double[] fntsizes = { 8, 16, 32 };
+            int[] iSpace = { 0, 1, 2 };
 
             Grid grid = new Grid();
             Content = grid;
@@ -34,48 +32,47 @@ namespace SetFontSizeProperty
                 grid.RowDefinitions.Add(row);
             }
 
-            for (int i = 0; i < fntsizes.Length; i++)
+            for (int i = 0; i < iSpace.Length; i++)
             {
                 ColumnDefinition col = new ColumnDefinition();
                 col.Width = GridLength.Auto;
                 grid.ColumnDefinitions.Add(col);
             }
 
-            for (int i = 0; i < fntsizes.Length; i++)
+            for (int i = 0; i < iSpace.Length; i++)
             {
-                Button btn = new Button();
-                btn.Content = new TextBlock(new Run("Set Window FontSize To " + fntsizes[i]));
-                btn.Tag = fntsizes[i];
+                SpaceButton btn = new SpaceButton();
+                btn.Text = "Set WIndow Space to " + iSpace[i];
+                btn.Tag = iSpace[i];
                 btn.HorizontalAlignment = HorizontalAlignment.Center;
                 btn.VerticalAlignment = VerticalAlignment.Center;
-                btn.Click += WindowFontSizeOnClick;
+                btn.Click += WindowPropertyOnClick;
                 grid.Children.Add(btn);
                 Grid.SetRow(btn, 0);
                 Grid.SetColumn(btn, i);
 
-                btn = new Button();
-                btn.Content = new TextBlock(new Run("Set Button FontSize to " + fntsizes[i]));
-                btn.Tag = fntsizes[i];
+                btn = new SpaceButton();
+                btn.Text = "Set button Space to " + iSpace[i];
+                btn.Tag = iSpace[i];
                 btn.HorizontalAlignment = HorizontalAlignment.Center;
                 btn.VerticalAlignment = VerticalAlignment.Center;
-                btn.Click += ButtonFontSizeOnClick;
+                btn.Click += ButtonPropertyOnClcik;
                 grid.Children.Add(btn);
                 Grid.SetRow(btn, 1);
                 Grid.SetColumn(btn, i);
-                (btn.Content as TextBlock).FontSize = 12;
             }
         }
 
-        void WindowFontSizeOnClick( object sender, RoutedEventArgs args )
+        void WindowPropertyOnClick(object sender, RoutedEventArgs args)
         {
-            Button btn = args.Source as Button;
-            FontSize = (double)btn.Tag;
+            SpaceButton btn = args.Source as SpaceButton;
+            Space = (int)btn.Tag;
         }
 
-        void ButtonFontSizeOnClick( object sender, RoutedEventArgs args)
+        void ButtonPropertyOnClcik(object sender, RoutedEventArgs args)
         {
-            Button btn = args.Source as Button;
-            btn.FontSize = (double)btn.Tag;
+            SpaceButton btn = args.Source as SpaceButton;
+            btn.Space = (int)btn.Tag;
         }
     }
 }
