@@ -105,7 +105,7 @@ namespace DrawCircles
             else if (isDragging)
             {
                 Canvas.SetLeft(elDragging, ptElementsSatrt.X + ptMouse.X - ptMouseStart.X);
-                Canvas.SetTop(elDragging, ptElementsSatrt.Y - ptMouse.Y - ptMouseStart.X);
+                Canvas.SetTop(elDragging, ptElementsSatrt.Y + ptMouse.Y - ptMouseStart.Y);
             }
         }
 
